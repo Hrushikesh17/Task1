@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Team Structure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .corner {
+            position: relative;
+            height: 50px;
+        }
+        .corner::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: #e0b0ff;
+        }
+        .top-corner::before {
+            top: 0;
+            right: 0;
+            transform: skew(0, -10deg);
+        }
+        .bottom-corner::before {
+            bottom: 0;
+            left: 0;
+            transform: skew(0, 10deg);
+        }
+        .company-name {
+            background-color: #e0b0ff;
+            color: white;
+            text-align: center;
+            padding: 8px;
+            margin: 20px auto;
+            font-size: 16px;
+            width: 50%;
+            border-radius: 5px;
+        }
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .divider {
+            border-top: 3px dashed #ccc;
+            margin: 20px 0;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 20px;
+        }
+        .team-section {
+            margin-bottom: 30px;
+        }
+        .team-header {
+            background-color: #e0b0ff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            width: 40%;
+            margin: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .team-member {
+            text-align: center;
+            width: calc(25% - 15px);
+            max-width: 100px;
+        }
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+        .team-member .name {
+            font-weight: bold;
+            font-size: 12px;
+            margin: 0;
+        }
+        .team-member .role {
+            color: #e0b0ff;
+            font-size: 11px;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+                padding: 10px;
+            }
+            .company-name {
+                width: 80%;
+            }
+            .team-members {
+                gap: 10px;
+            }
+            .team-member {
+                width: calc(33% - 10px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .team-member {
+                width: calc(50% - 10px);
+            }
+            .team-member img {
+                width: 60px;
+                height: 60px;
+            }
+            .team-member .name {
+                font-size: 10px;
+            }
+            .team-member .role {
+                font-size: 10px;
+            }
+            .company-name {
+                width: 90%;
+            }
+            .team-header {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="corner top-corner"></div>
+        
+        <div class="company-name">
+            Company Name
+        </div>
+        
+        <p class="intro">
+            Welcome to [Your Company Name], where a dedicated team of professionals works
+            together to bring innovation, creativity, and expertise to software industry. Get to know
+            the individuals who make our company thrive.
+        </p>
+        
+        <div class="divider"></div>
+        
+        <h2>Meet Our Team</h2>
+        
+        <div class="team-section">
+            <div class="team-header">Leadership/ Management Team</div>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Founder 1">
+                    <p class="name">[Founder Name]</p>
+                    <p class="role">Founder/ CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Founder 2">
+                    <p class="name">[Founder Name]</p>
+                    <p class="role">Founder/ CEO</p>
+                </div>
+            </div>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="VP 1">
+                    <p class="name">[VP Name]</p>
+                    <p class="role">VP, Development &<br>Operations</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="VP 2">
+                    <p class="name">[VP Name]</p>
+                    <p class="role">VP, Marketing</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="VP 3">
+                    <p class="name">[VP Name]</p>
+                    <p class="role">VP, Sales</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="team-section">
+            <div class="team-header">Development Team</div>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Developer 1">
+                    <p class="name">[Developer Name]</p>
+                    <p class="role">Team Lead, BE</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Developer 2">
+                    <p class="name">[Developer Name]</p>
+                    <p class="role">Software Engineer</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Developer 3">
+                    <p class="name">[Developer Name]</p>
+                    <p class="role">Software Engineer</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Developer 4">
+                    <p class="name">[Developer Name]</p>
+                    <p class="role">Software Engineer</p>
+                </div>
+            </div>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Developer 5">
+                    <p class="name">[Developer Name]</p>
+                    <p class="role">Software Engineer</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Developer 6">
+                    <p class="name">[Developer Name]</p>
+                    <p class="role">Software Engineer</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Developer 7">
+                    <p class="name">[Developer Name]</p>
+                    <p class="role">Software Engineer</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="team-section">
+            <div class="team-header">Sales and Marketing Team</div>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Sales/Marketing 1">
+                    <p class="name">[Team Member Name]</p>
+                    <p class="role">Sales/Marketing Role</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Sales/Marketing 2">
+                    <p class="name">[Team Member Name]</p>
+                    <p class="role">Sales/Marketing Role</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Sales/Marketing 3">
+                    <p class="name">[Team Member Name]</p>
+                    <p class="role">Sales/Marketing Role</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Sales/Marketing 4">
+                    <p class="name">[Team Member Name]</p>
+                    <p class="role">Sales/Marketing Role</p>
+                </div>
+            </div>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Sales/Marketing 5">
+                    <p class="name">[Team Member Name]</p>
+                    <p class="role">Sales/Marketing Role</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Sales/Marketing 6">
+                    <p class="name">[Team Member Name]</p>
+                    <p class="role">Sales/Marketing Role</p>
+                </div>
+                <div class="team-member">
+                    <img src="./Asset/man.png" alt="Sales/Marketing 7">
+                    <p class="name">[Team Member Name]</p>
+                    <p class="role">Sales/Marketing Role</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="corner bottom-corner"></div>
+    </div>
+</body>
+</html>
